@@ -1,5 +1,28 @@
 [![release](https://img.shields.io/github/release/getnamo/BLUI.svg?style=flat-square)](https://github.com/getnamo/BLUI/releases)
 ![BLUI-logo](https://cloud.githubusercontent.com/assets/1334174/5969395/201a1202-a7f1-11e4-98a4-12bc6793f830.png)
+
+### Video of Demo project
+
+[![Demo Project](https://img.youtube.com/vi/LCY-xcj3IjA/0.jpg)](https://www.youtube.com/watch?v=LCY-xcj3IjA)
+
+Click on image to take you to video.
+
+
+What is it?
+---------------------------------------
+BLUI is an Unreal Engine 4 plugin that allows easy interaction with the Chromium Embedded Framework. It provides a simple Material Instance and input functions to help streamline the rendering of rich HTML interfaces.
+
+BLUI tries to stay out of the way as much as possible. All rendering of the DOM and processing of the JavaScript happens in a separate process, just like Chromium. BLUI only updates the texture inside the material instance when Chromium requests a redraw, not every tick, saving a bit more processing along the way.
+
+Features
+---------------------------------------
++ Chromium Powered (same thing that powers Google Chrome!)
++ Fully compatible with every web technology that Chrome/Chromium works with. (HTML5, WebAudio, WebSockets etc.)
++ No specific ties to ***any*** in game class, simple use Blueprints (or C++) to create a new "BluEye" object and grab its material instance, then you can paint it on anything!
++ Execute JavaScript in the "browser" from your game to pass data to the web page
++ Using `blu_event` JS native function you can pass data from the page's JavaScript back into UE4!
++ C++ or Blueprints, works with both!
++ 
 [![Github All Releases](https://img.shields.io/github/downloads/getnamo/BLUI/total.svg)](https://github.com/getnamo/BLUI/releases)
 
 ## Getnamo Fork Notes
@@ -66,32 +89,6 @@ Since 4.0.0 - This actor is no longer needed. Ticking happens internally.
 
 Older verions:
 Instead of ticking in your level bp, I prefer to use a simple actor to do the ticking. Other convenience blueprints may spawn this as necessary so if you use those, you don't ever need to use this directly.
-
-## Demo Project
-
-Thanks to @oivio we have the Demo project updated to the latest release. See https://github.com/getnamo/BLUI/releases/tag/3.4.0 for the 4.22 Demo project release ([BLUI-v3.4.0-UE4.22-DemoExamples.7z](https://github.com/getnamo/BLUI/releases/download/3.4.0/BLUI-v3.4.0-UE4.22-DemoExamples.7z))
-
-### Video of Demo project
-
-[![Demo Project](https://img.youtube.com/vi/PRxO0yCO3Kk/0.jpg)](https://youtu.be/PRxO0yCO3Kk)
-
-Click on image to take you to video.
-
-
-What is it?
----------------------------------------
-BLUI is an Unreal Engine 4 plugin that allows easy interaction with the Chromium Embedded Framework. It provides a simple Material Instance and input functions to help streamline the rendering of rich HTML interfaces.
-
-BLUI tries to stay out of the way as much as possible. All rendering of the DOM and processing of the JavaScript happens in a separate process, just like Chromium. BLUI only updates the texture inside the material instance when Chromium requests a redraw, not every tick, saving a bit more processing along the way.
-
-Features
----------------------------------------
-+ Chromium Powered (same thing that powers Google Chrome!)
-+ Fully compatible with every web technology that Chrome/Chromium works with. (HTML5, WebAudio, WebSockets etc.)
-+ No specific ties to ***any*** in game class, simple use Blueprints (or C++) to create a new "BluEye" object and grab its material instance, then you can paint it on anything!
-+ Execute JavaScript in the "browser" from your game to pass data to the web page
-+ Using `blu_event` JS native function you can pass data from the page's JavaScript back into UE4!
-+ C++ or Blueprints, works with both!
 
 Setting up the editor and project
 ---------------------------------------
